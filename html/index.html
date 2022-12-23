@@ -6,52 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
     <title>Decoder</title>
-    <!-- css reset -->
-
+    <!-- css normalize -->
+    <link rel="stylesheet" href="../assets/css/normalize.css">
     <!-- main css -->
     <link rel="stylesheet" href="../assets/css/style.css" />
   </head>
   <body>
     <!-- header -->
-    <header>
+    <header class="header">
       <nav class="navbar">
-        <div class="container">
+        <div class="nav-bar container">
           <a class="navbar__brand" href="#">
-            <img
-              src="../assets/img/marcas/logomarca.svg"
-              class="logomarca"
-              alt="logomarca da aplicação"
-            />
+            <img src="../assets/img/marcas/logomarca.svg" class="logomarca" alt="logomarca da aplicação"/>
           </a>
           <div class="collapse navbar__collapse">
             <ul class="list__icons">
               <li class="social__icons">
-                <a href="#"
-                  ><img
-                    src="../assets/img/sociais/github.svg"
-                    alt="icone do GitHub"
-                /></a>
+                <a href="#"><img src="../assets/img/sociais/github.svg" alt="icone do GitHub"/></a>
               </li>
               <li class="social__icons">
-                <a href=""
-                  ><img
-                    src="../assets/img/sociais/linkedin.svg"
-                    alt="icone do Linkedin"
-                /></a>
+                <a href=""><img src="../assets/img/sociais/linkedin.svg" alt="icone do Linkedin"/></a>
               </li>
               <li class="social__icons">
-                <a href=""
-                  ><img
-                    src="../assets/img/sociais/whatsapp.svg"
-                    alt="icone do whatsapp"
-                /></a>
+                <a href=""><img src="../assets/img/sociais/whatsapp.svg" alt="icone do whatsapp"/></a>
               </li>
               <li class="social__icons">
-                <a href=""
-                  ><img
-                    src="../assets/img/sociais/instagram.svg"
-                    alt="icone do Instagram"
-                /></a>
+                <a href=""><img src="../assets/img/sociais/instagram.svg" alt="icone do Instagram"/></a>
               </li>
             </ul>
           </div>
@@ -61,30 +41,21 @@
     <!-- main -->
     <main class="content container">
       <div class="boxes__text">
-        <textarea
-          name="input"
-          id="input-text"
-          cols="30"
-          rows="10"
-          placeholder="Insira seu texto aqui..."
-        ></textarea>
-        <textarea name="output" id="output-text" cols="30" rows="10">
-<span class="text__box__null"><p>Nenhuma mensagem encontrada</p>
-            <p>Texto de exemplo</p></span></textarea
-        >
+        <textarea name="input" id="input-text" cols="30" rows="10" placeholder="Insira seu texto aqui..."></textarea>
+        <textarea name="input" id="input-text" cols="30" rows="10" placeholder="Nenhuma mensagem encontrada"></textarea>
       </div>
       <div class="btns">
-        <button class="btn__encripty">
+        <button class="btn btn__encripty">
           <span class="text__button">criptografar</span>
         </button>
-        <button class="btn__decripty">
+        <button class="btn btn__decripty">
           <span class="text__button">descriptografar</span>
         </button>
       </div>
     </main>
     <!-- footer -->
     <footer class="rodape">
-      <span>Copyright 2022. Aguinele Queiroz</span>
+      <p>Copyright 2022. Aguinele Queiroz</p>
     </footer>
     <!-- js file -->
     <script src="../assets/js/decoder.js"></script>
