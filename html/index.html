@@ -39,23 +39,37 @@
       </nav>
     </header>
     <!-- main -->
-    <main class="content container">
-      <div class="boxes__text">
-        <textarea name="input" id="input-text" cols="30" rows="10" placeholder="Insira seu texto aqui..."></textarea>
-        <textarea name="input" id="input-text" cols="30" rows="10" placeholder="Nenhuma mensagem encontrada"></textarea>
-      </div>
-      <div class="btns">
-        <button class="btn btn__encripty">
-          <span class="text__button">criptografar</span>
-        </button>
-        <button class="btn btn__decripty">
-          <span class="text__button">descriptografar</span>
-        </button>
+    <main>
+      <div class="container content">
+        <div class="boxes__text">
+          <textarea name="input" id="input-text" placeholder="Insira seu texto aqui..."></textarea>
+          <div class="input__box">
+            <button class="btn__copy__img">
+              <img src="../assets/img/images-gerais/copy.svg" alt="icone de copiar">
+            </button>
+
+            <div class="text__input__box">
+              <img src="../assets/img/images-gerais/img-lens-zoom.svg" alt="lente de aumento">
+              <h2>Nenhuma mensagem encontrada</h2>
+              <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+            </div>
+
+            <textarea name="input" id="input-text"></textarea>
+          </div>
+        </div>
+        <div class="btns">
+          <button class="btn btn__encripty">
+            <span class="text__button">criptografar</span>
+          </button>
+          <button class="btn btn__decripty">
+            <span class="text__button">descriptografar</span>
+          </button>
+        </div>
       </div>
     </main>
     <!-- footer -->
     <footer class="rodape">
-      <p>Copyright 2022. Aguinele Queiroz</p>
+      <p>Copyright &#169 2022. Aguinele Queiroz</p>
     </footer>
     <!-- js file -->
     <script src="../assets/js/decoder.js"></script>
