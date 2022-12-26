@@ -15,26 +15,26 @@
     <!-- header -->
     <header class="header">
       <nav class="navbar">
-        <div class="nav-bar container">
-          <a class="navbar__brand" href="#">
-            <img src="../assets/img/marcas/logomarca.svg" class="logomarca" alt="logomarca da aplicação"/>
-          </a>
-          <div class="collapse navbar__collapse">
-            <ul class="list__icons">
-              <li class="social__icons">
-                <a href="#"><img src="../assets/img/sociais/github.svg" alt="icone do GitHub"/></a>
-              </li>
-              <li class="social__icons">
-                <a href=""><img src="../assets/img/sociais/linkedin.svg" alt="icone do Linkedin"/></a>
-              </li>
-              <li class="social__icons">
-                <a href=""><img src="../assets/img/sociais/whatsapp.svg" alt="icone do whatsapp"/></a>
-              </li>
-              <li class="social__icons">
-                <a href=""><img src="../assets/img/sociais/instagram.svg" alt="icone do Instagram"/></a>
-              </li>
-            </ul>
-          </div>
+        <div class="nav__bar container">
+            <a class="navbar__brand" href="#">
+              <img src="../assets/img/marcas/logomarca.svg" class="logomarca" alt="logomarca da aplicação"/>
+            </a>
+            <div class="collapse navbar__collapse">
+              <ul class="list__icons">
+                <li class="social__icons">
+                  <a href="#"><img src="../assets/img/sociais/github.svg" alt="icone do GitHub"/></a>
+                </li>
+                <li class="social__icons">
+                  <a href=""><img src="../assets/img/sociais/linkedin.svg" alt="icone do Linkedin"/></a>
+                </li>
+                <li class="social__icons">
+                  <a href=""><img src="../assets/img/sociais/whatsapp.svg" alt="icone do whatsapp"/></a>
+                </li>
+                <li class="social__icons">
+                  <a href=""><img src="../assets/img/sociais/instagram.svg" alt="icone do Instagram"/></a>
+                </li>
+              </ul>
+            </div>
         </div>
       </nav>
     </header>
@@ -43,20 +43,24 @@
       <div class="container content">
         <div class="boxes__text">
           <textarea name="input" id="input-text" placeholder="Insira seu texto aqui..."></textarea>
-          <div class="input__box">
+          <div class="output__relative">
+            <textarea class="text__area__output" name="output" id="output-text" placeholder="Saída..."></textarea>
             <button class="btn__copy__img">
               <img src="../assets/img/images-gerais/copy.svg" alt="icone de copiar">
             </button>
+          </div>
+          <!-- <div class="output__box">
 
-            <div class="text__input__box">
+            <div class="text__output__box">
               <img src="../assets/img/images-gerais/img-lens-zoom.svg" alt="lente de aumento">
               <h2>Nenhuma mensagem encontrada</h2>
               <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
             </div>
 
-            <textarea name="input" id="input-text"></textarea>
-          </div>
+            <textarea name="output" id="output-text"></textarea>
+          </div> -->
         </div>
+        <!-- btns -->
         <div class="btns">
           <button class="btn btn__encripty">
             <span class="text__button">criptografar</span>
