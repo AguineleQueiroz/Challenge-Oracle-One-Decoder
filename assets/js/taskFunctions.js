@@ -14,6 +14,7 @@ function hashCodeForEncripty(element) {
         'u': '3#$91ç1l',
     }
     if (codesForEncripty.includes(element)) return codesForEncripty[element];
+    return;
 }
 // substitui os caracteres por um hashcode
 function replaceCharWithHashCode(element) {
@@ -23,27 +24,25 @@ function replaceCharWithHashCode(element) {
             break;
         case 'e':
             strArr[element] = hashCodeForEncripty(element);
+            break;
         case 'i':
             strArr[element] = hashCodeForEncripty(element);
+            break;
         case 'o':
             strArr[element] = hashCodeForEncripty(element);
+            break;
         case 'u':
             strArr[element] = hashCodeForEncripty(element);
+            break;
         default:
-            return;
+            return strArr;
     }
+    return strArr;
 }
 // criptografa a string passada como argumento 
-const encriptyString = (strArr) => {
+function encriptyString(strArr) {
     strArr.forEach(element => {
         replaceCharWithHashCode(element);
     });
     return strArr;
 }
-
-// lógica de captura das entradas na textarea
-/* 
-*
-*   ...
-*
-*/
