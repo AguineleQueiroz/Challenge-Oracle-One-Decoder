@@ -59,7 +59,7 @@ const btnDecript = document.querySelector(".btn__decript");
 const copyOutput = document.querySelector(".btn__copy__img");
 
 // pega dados digitados e envia para criptografar
-function getDataInput() {
+function getDataInput(){
     const dataStrInput = document.querySelector(".text__area__input").value;
     const strArr = Object.assign([], dataStrInput);
     return encriptyString(strArr);
