@@ -13,37 +13,72 @@ function hashCodeForEncripty(element) {
         'o': 'nI1#$24g%',
         'u': '3#$91ç1l',
     }
-    if (codesForEncripty.includes(element)) return codesForEncripty[element];
+    if (codesForEncripty.hasOwnProperty(element)) return codesForEncripty[element];
+    return;
 }
 // substitui os caracteres por um hashcode
-function replaceCharWithHashCode(element) {
+function replaceCharWithHashCode(element, strArr) {
+    let temp = element;
     switch (element) {
         case 'a':
-            strArr[element] = hashCodeForEncripty(element);
+            temp = hashCodeForEncripty(element);
             break;
         case 'e':
-            strArr[element] = hashCodeForEncripty(element);
+            temp = hashCodeForEncripty(element);
+            break;
         case 'i':
-            strArr[element] = hashCodeForEncripty(element);
+            temp = hashCodeForEncripty(element);
+            break;
         case 'o':
-            strArr[element] = hashCodeForEncripty(element);
+            temp = hashCodeForEncripty(element);
+            break;
         case 'u':
-            strArr[element] = hashCodeForEncripty(element);
-        default:
-            return;
+            temp = hashCodeForEncripty(element);
+            break;
     }
-}
-// criptografa a string passada como argumento 
-const encriptyString = (strArr) => {
-    strArr.forEach(element => {
-        replaceCharWithHashCode(element);
-    });
-    return strArr;
+    return temp;
 }
 
-// lógica de captura das entradas na textarea
+// criptografa a string passada como argumento 
+function encriptyString(strArr) {
+    const newArr = strArr.map((item) => {
+        return replaceCharWithHashCode(item, strArr);
+    })
+    return newArr;
+}
+
 /* 
 *
-*   ...
+*   lógica de respostas
 *
 */
+
+// buttons
+const btnEncript = document.querySelector(".btn__encript");
+const btnDecript = document.querySelector(".btn__decript");
+const copyOutput = document.querySelector(".btn__copy__img");
+
+// pega dados digitados e envia para criptografar
+function getDataInput() {
+    const dataStrInput = document.querySelector(".text__area__input").value;
+    const strArr = Object.assign([], dataStrInput);
+    return encriptyString(strArr);
+}
+// pega dados da saida
+function getCopyDataOutput() {
+    return navigator.clipboard.readText().then(
+        (clipText) => {
+            return (document.querySelector(".text__area__output").value += clipText);
+        }
+    );
+}
+// imprimir texto criptografado
+function displayTextEncripted() {
+    const textEncripted = getDataInput().join('');
+    const outputTextDiv = document.querySelector(".text__area__output");
+    const textOutput = document.createTextNode(textEncripted);
+    outputTextDiv.appendChild(textOutput);
+}
+
+btnEncript.addEventListener('click', displayTextEncripted);
+copyOutput.addEventListener('click', getCopyDataOutput);
