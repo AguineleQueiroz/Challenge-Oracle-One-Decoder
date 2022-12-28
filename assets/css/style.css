@@ -137,20 +137,20 @@ textarea:focus {
   box-shadow: 3px 3px 1px var(--dark-color);
 }
 
-.btn__encript {
+.btn__encripty {
   background-color: var(--primary-color);
   border: 1px solid var(--dark-color);
   transition: ease-out 300ms;
 }
 
-.btn__decript {
+.btn__decripty {
   background-color: var(--secondary-color);
   border: 1px solid var(--dark-color);
   transition: ease-out 300ms;
 }
 
-.btn__encript:hover,
-.btn__decript:hover {
+.btn__encripty:hover,
+.btn__decripty:hover {
   background-color: var(--white-color);
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
