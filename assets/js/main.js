@@ -63,6 +63,12 @@ function encriptyString(charArr) {
     return newCharArr;
 }
 
+function copyToClipboard() {
+    navigator.clipboard.writeText(valueTextAreaOutput()).then(
+        () => alert("Copiado para área de transferência!")
+    )
+}
+
 /* 
 *
 *   lógica de respostas
@@ -71,34 +77,31 @@ function encriptyString(charArr) {
 
 const btnEncript = document.querySelector(".btn__encript");
 const btnDecript = document.querySelector(".btn__decript");
-// const copyOutput = document.querySelector(".btn__copy__img");
+const btnCopyOutput = document.querySelector(".btn__copy__img");
 
-// function getDataInputForEncrypt() {
-//     const dataStrInput = document.querySelector(".text__area__input").value;
-//     const charArr = Object.assign([], dataStrInput);
-//     return charArr;
-// }
 
-function writeTextEncryptedOutput() {
-    const dataStrInput = document.querySelector(".text__area__input").value;
+const addTextInOutput = (text) => {
+    const outputTextDiv = document.querySelector(".text__area__output");
+    const textOutput = document.createTextNode(text);
+    outputTextDiv.appendChild(textOutput);
+}
+
+const valueTextAreaInput = () => document.querySelector(".text__area__input").value;
+const valueTextAreaOutput = () => document.querySelector(".text__area__output").value;
+
+function displayTextEncryted() {
+    const dataStrInput = valueTextAreaInput();
     const charArr = Object.assign([], dataStrInput);
     const textEncripted = encriptyString(charArr).join('');
-    const outputTextDiv = document.querySelector(".text__area__output");
-    const textOutput = document.createTextNode(textEncripted);
-    outputTextDiv.appendChild(textOutput);
+    addTextInOutput(textEncripted);
 }
 
-function writeTextDecryptedOutput() {
-    console.log('entrou')
-    const str = document.querySelector(".text__area__input").value;
-    console.log(str)
+function displayTextDecrypted() {
+    const str = valueTextAreaInput();
     const textDecrypted = decryptString(str);
-    console.log(textDecrypted)
-    const outputTextDiv = document.querySelector(".text__area__output");
-    const textOutput = document.createTextNode(textDecrypted);
-    console.log(textOutput)
-    outputTextDiv.appendChild(textOutput);
+    addTextInOutput(textDecrypted);
 }
 
-btnEncript.addEventListener('click', writeTextEncryptedOutput);
-btnDecript.addEventListener('click', writeTextDecryptedOutput);
+btnEncript.addEventListener('click', displayTextEncryted);
+btnDecript.addEventListener('click', displayTextDecrypted);
+btnCopyOutput.addEventListener('click', copyToClipboard);
