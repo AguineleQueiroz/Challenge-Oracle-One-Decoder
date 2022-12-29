@@ -26,6 +26,7 @@
   --white-color: #ffffff;
   --muted-color: #777777;
   --focusable-color: #eef1ff;
+  --shadow-color: #ffb100;
   /* hover */
   --primary-hover-color: #6c4ab6;
   --secondary-hover-color: #8758ff;
@@ -105,7 +106,7 @@ textarea {
   outline: none;
   border: 1px solid var(--gray-color);
   padding: 2rem 1rem 1rem 1rem;
-  box-shadow: 3px 3px 1px var(--dark-color);
+  box-shadow: 3px 3px 1px var(--shadow-color);
 }
 
 ::placeholder {
@@ -115,6 +116,13 @@ textarea {
 
 textarea:focus {
   border: 1px solid var(--secondary-color);
+}
+
+.text__area__output {
+  background-image: url(../img/images-gerais/svg-text-area-output.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .btns {
@@ -134,7 +142,7 @@ textarea:focus {
   text-transform: uppercase;
   font-size: 0.8rem;
   cursor: pointer;
-  box-shadow: 3px 3px 1px var(--dark-color);
+  box-shadow: 3px 3px 1px var(--shadow-color);
 }
 
 .btn__encript {
@@ -190,6 +198,7 @@ footer {
   color: var(--white-color);
   font-weight: var(--fw-light);
   font-size: 0.9rem;
+  text-align: center;
 }
 
 /* media queries */

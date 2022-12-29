@@ -83,6 +83,8 @@ const btnCopyOutput = document.querySelector(".btn__copy__img");
 const addTextInOutput = (text) => {
     const outputTextDiv = document.querySelector(".text__area__output");
     const textOutput = document.createTextNode(text);
+    const textAreaOutput = document.querySelector(".text__area__output");
+    textAreaOutput.style.cssText = 'background-image: url();';
     outputTextDiv.appendChild(textOutput);
 }
 
