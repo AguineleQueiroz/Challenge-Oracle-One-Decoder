@@ -32,13 +32,12 @@ function decryptString(str) {
 }
 // substitui os caracteres por um hashcode
 function replaceCharWithHashCode(symbols) {
-
     for (const char in CODES_FOR_ENCRYPT) {
         if (char === symbols) {
-            let code = encryptToHashCode(char);
-            return code;
+            return encryptToHashCode(char);
         }
     }
+    return symbols;
 }
 
 function encriptyString(charArr) {
