@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>Decoder</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./assets/img/marcas/logo.svg" type="image/x-icon">
+    <!-- css normalize -->
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="navbar">
+        <div class="nav__bar container">
+            <a class="navbar__brand" href="#">
+              <img src="../assets/img/marcas/logomarca.svg" class="logomarca" alt="logomarca da aplicação"/>
+            </a>
+            <div class="collapse navbar__collapse">
+              <ul class="list__icons">
+                <li class="social__icons">
+                  <a href="#"><img src="../assets/img/sociais/github.svg" alt="icone do GitHub"/></a>
+                </li>
+                <li class="social__icons">
+                  <a href=""><img src="../assets/img/sociais/linkedin.svg" alt="icone do Linkedin"/></a>
+                </li>
+                <li class="social__icons">
+                  <a href=""><img src="../assets/img/sociais/whatsapp.svg" alt="icone do whatsapp"/></a>
+                </li>
+                <li class="social__icons">
+                  <a href=""><img src="../assets/img/sociais/instagram.svg" alt="icone do Instagram"/></a>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </nav>
+    </header>
+    <!-- main -->
+    <main>
+      <div class="container content">
+        <div class="boxes__text">
+          <textarea class="text__area__input" name="input" id="input-text" placeholder="Insira seu texto aqui..."></textarea>
+          <div class="output__relative">
+            <textarea class="text__area__output" name="output" id="output-text"></textarea>
+            <button class="btn__copy__img">
+              <img src="./assets/img/images-gerais/copy.svg" alt="icone de copiar">
+            </button>
+          </div>
+        </div>
+        <!-- btns -->
+        <div class="btns">
+          <button class="btn btn__encript">
+            <span class="text__button">criptografar</span>
+          </button>
+          <button class="btn btn__decript">
+            <span class="text__button">descriptografar</span>
+          </button>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="rodape">
+      <p>Copyright &#169 2022. Aguinele Queiroz <br> Alura + Oracle</p>
+    </footer>
+    <!-- js file -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
