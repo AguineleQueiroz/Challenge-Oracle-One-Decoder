@@ -59,13 +59,13 @@ function encriptyString(charArr) {
 }
 
 const resetInputs = () => {
-    document.location.reload();
+    setTimeout(() => {
+        document.location.reload();
+    }, .2);
 }
 
 function copyToClipboard() {
-    navigator.clipboard.writeText(valueTextAreaOutput()).then(
-        () => alert("Copiado para área de transferência!")
-    )
+    navigator.clipboard.writeText(valueTextAreaOutput()).then();
     resetInputs();
 }
 
