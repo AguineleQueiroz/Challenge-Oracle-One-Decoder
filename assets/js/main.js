@@ -58,15 +58,20 @@ function encriptyString(charArr) {
     return newCharArr;
 }
 
+const resetInputs = () => {
+    document.location.reload();
+}
+
 function copyToClipboard() {
     navigator.clipboard.writeText(valueTextAreaOutput()).then(
         () => alert("Copiado para área de transferência!")
     )
+    resetInputs();
 }
 
 /* 
 *
-*   lógica de respostas
+*   lógica de funcionamento
 *
 */
 
@@ -87,7 +92,7 @@ const valueTextAreaInput = () => document.querySelector(".text__area__input").va
 const valueTextAreaOutput = () => document.querySelector(".text__area__output").value;
 
 function displayTextEncryted() {
-    const dataStrInput = valueTextAreaInput();
+    const dataStrInput = valueTextAreaInput().toLowerCase();
     const charArr = Object.assign([], dataStrInput);
     const textEncripted = encriptyString(charArr).join('');
     addTextInOutput(textEncripted);
