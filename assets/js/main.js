@@ -63,9 +63,11 @@ const resetInputs = () => {
         document.location.reload();
     }, .2);
 }
-
+// erro! nao copia quando deployado no git pages
 function copyToClipboard() {
-    navigator.clipboard.writeText(valueTextAreaOutput()).then();
+    navigator.clipboard.writeText(valueTextAreaOutput()).then(
+        () => alert("Copiado para a área de transferência!")
+    );
     resetInputs();
 }
 
