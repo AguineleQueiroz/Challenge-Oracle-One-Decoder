@@ -5,7 +5,8 @@ A aplicação consiste em um decodificador de texto. O texto inserido é criptog
 
 
 ## Status da Aplicação
-Completo!
+[![Status Completo](https://img.shields.io/badge/STATUS-COMPLETO-green?style=for-the-badge)](https://jupyter.org/try)
+
 
 ## Tecnologias Utilizadas
 
